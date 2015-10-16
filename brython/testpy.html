@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="brython.js"></script>
+</head>
+<body onload="brython()">
+
+<h1>My first SVG</h1>
+
+<script type="text/python">
+from browser import document, alert
+
+def sideshow(ev):
+    alert('Up!')
+    print('Woot!')
+
+document["up"].bind('click', sideshow)
+</script>
+<button id="up">UP!</button>
+
+<svg width="550" height="550" id="board">
+<!--
+    <rect x="25" y="25" rx="5" ry="5" width="125" height="125" style="fill:#FFFFFF" /> 
+    <rect x="25" y="25" rx="5" ry="5" width="125" height="125" style="fill:#FFFFFF" /> 
+    <rect x="25" y="25" rx="5" ry="5" width="125" height="125" style="fill:#FFFFFF" /> 
+    <rect x="25" y="25" rx="5" ry="5" width="125" height="125" style="fill:#FFFFFF" /> 
+    -->
+</svg>
+
+<svg width="40" height="30">
+   <polygon points="20,5, 40,25, 0,25" stroke="#003300" stroke-width="1" fill="#00FFFF" />
+   
+</svg> 
+ 
+</body>
+</html>
